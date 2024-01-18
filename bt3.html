@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function arrange(arr) {
+    let alpha = [];
+    let num = [];
+    let chater_s = [];
+    for (let i = 0; i < arr.length; i++) {
+        let chater = arr[i];
+        if (/[a-zA-Z]/.test(chater)) {
+            alpha.push(chater);
+        } else if (/[0-9]/.test(chater)) {
+            num.push(chater);
+        } else {
+            chater_s.push(chater);
+        }
+    }
+    let resull = alpha.concat(num, chater_s);
+    return resull;
+    }
+    const arr = prompt("Nhập vào một chuỗi bất kỳ:");
+    const resull = arrange(arr);
+    console.log("Chuỗi đã sắp xếp: " + resull.join(''));
+    </script>
+</body>
+</html>

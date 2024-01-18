@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Capitalization(arr) {
+    const arr_num = arr.split(" ");
+    for (let i = 0; i < arr_num.length; i++) {
+        let chater = arr_num[i];
+        if (chater.length > 0) {
+            let chater_end = chater.charAt(chater.length - 1);
+            chater = chater.slice(0, -1) + chater_end.toUpperCase();
+            arr_num[i] = chater;
+        }
+    }
+    const resull = arr_num.join(" ");
+    return resull;
+    }
+    const arr = prompt("Nhập vào một chuỗi bất kỳ:");
+    const resull = Capitalization(arr);
+    console.log("Chuỗi mới: " + resull);
+    </script>
+</body>
+</html>
